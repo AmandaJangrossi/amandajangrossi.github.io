@@ -1,0 +1,119 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Data Analyst Portfolio Design System */
+
+@layer base {
+  :root {
+    --background: 44 43 60; /* #2c2b3c - Primary Background */
+    --foreground: 239 249 240; /* #eff9f0 - Primary Text */
+
+    --card: 64 63 76; /* #403f4c - Secondary Background */
+    --card-foreground: 239 249 240; /* #eff9f0 - Card Text */
+
+    --popover: 64 63 76;
+    --popover-foreground: 239 249 240;
+
+    --primary: 55 114 255; /* #3772ff - Accent Blue */
+    --primary-foreground: 239 249 240;
+
+    --secondary: 64 63 76; /* #403f4c - Secondary Color */
+    --secondary-foreground: 239 249 240;
+
+    --muted: 64 63 76;
+    --muted-foreground: 239 249 240;
+
+    --accent: 55 114 255; /* #3772ff */
+    --accent-foreground: 239 249 240;
+
+    --destructive: 239 68 68;
+    --destructive-foreground: 239 249 240;
+
+    --border: 64 63 76;
+    --input: 64 63 76;
+    --ring: 55 114 255;
+
+    --radius: 0.5rem;
+
+    --dark-bg: 44 43 60; /* #2c2b3c - Primary Background */
+    --darker-bg: 64 63 76; /* #403f4c - Secondary Background */
+    --light-bg: 239 249 240; /* #eff9f0 - Light Text Color */
+    --accent-blue: 55 114 255; /* #3772ff - Accent */
+    --accent-mint: 0 240 190; /* #00f0be - Extra Accent */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-mono;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes glow {
+    0%, 100% {
+      box-shadow: 0 0 5px rgba(55, 114, 255, 0.5);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(55, 114, 255, 0.8);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+  }
+
+  .animate-slide-in-left {
+    animation: slideInLeft 0.6s ease-out;
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite;
+  }
+
+  /* Utility classes */
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent-blue)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glass-effect {
+    backdrop-filter: blur(10px);
+    background: rgba(44, 43, 60, 0.1);
+    border: 1px solid rgba(239, 249, 240, 0.2);
+  }
+}
