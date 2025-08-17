@@ -1,28 +1,219 @@
-
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Data Analyst Portfolio</title>
-    <meta name="description" content="Professional Data Analyst Portfolio - Showcasing data projects, insights, and technical expertise" />
-    <meta name="author" content="Data Analyst" />
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  $1  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet" />
+<title>Amanda | Portfólio de Dados & BI</title>
+  <meta name="description" content="Portfólio de projetos de Dados & BI: Power BI, SQL, AppSheet, Automação e Análises com impacto real de negócio." />
+  <style>
+    :root{--bg:#010d29;--card:#0f3460;--muted:#f0fafbcc;--text:#f0fafb;--accent:#ffd41e;--chip:#0b2447;--ok:#2ecc71;--warn:#ffd41e;--bad:#e74c3c} 
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;} 
+    a{color:var(--accent);text-decoration:none} 
+    .wrap{max-width:1080px;margin:0 auto;padding:28px}
+    header{display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between;margin-bottom:24px}
+    .title h1{margin:0;font-size:28px;font-family:'Gotham','Montserrat', 'Poppins', sans-serif;letter-spacing:0.2px} 
+    .title p{margin:6px 0 0;color:var(--muted)}
+    .pill{display:inline-flex;align-items:center;gap:8px;background:var(--chip);border:1px solid rgba(255,255,255,0.08);color:var(--text);padding:6px 10px;border-radius:999px;font-size:12px} 
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+    .hero{grid-column:1/-1;background:linear-gradient(135deg,#0b1a3a 0%,#0a1733 100%);border:1px solid rgba(255,255,255,0.08);padding:22px;border-radius:16px} 
+    .hero h2{margin:0 0 8px;font-size:22px;font-family:'Gotham','Montserrat','Poppins',sans-serif} 
+    .hero p{margin:0;color:var(--muted)}
+    .toolbar{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .toolbar input{flex:1 1 220px;background:#0c0f16;border:1px solid #232a3b;color:var(--text);padding:10px 12px;border-radius:10px;outline:none}
+    .toolbar .filter{cursor:pointer}
 
-    <meta property="og:title" content="Data Analyst Portfolio" />
-    <meta property="og:description" content="Professional Data Analyst Portfolio - Showcasing data projects, insights, and technical expertise" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    .card{grid-column:span 12;background:var(--card);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:12px} 
+    @media(min-width:700px){.card{grid-column:span 6}}
+    .card h3{margin:0;font-size:18px}
+    .meta{display:flex;flex-wrap:wrap;gap:8px}
+    .chip{background:var(--chip);border:1px solid rgba(255,255,255,0.08);color:var(--muted);padding:4px 8px;border-radius:999px;font-size:12px} 
+    .impact{display:flex;flex-wrap:wrap;gap:6px}
+    .impact .badge{font-size:12px;padding:6px 8px;border-radius:10px;border:1px solid rgba(255,255,255,0.1);background:#0b1f45} 
+    .impact .ok{border-color:#1f6f3d} 
+    .impact .warn{border-color:#7a5f00} 
+    .impact .bad{border-color:#6b1f1f} 
+    details{background:#0c204a;border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:10px} 
+    details>summary{cursor:pointer;color:var(--muted)}
+    footer{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin-top:10px} 
+    .links{display:flex;gap:10px;flex-wrap:wrap} 
+    .cta{display:inline-flex;align-items:center;gap:8px;background:#091a3a;border:1px solid rgba(255,255,255,0.1);color:var(--text);padding:10px 12px;border-radius:12px} 
+    .hint{color:var(--muted);font-size:12px}
+    .hide{display:none}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="title">
+        <h1>Amanda — Portfólio de Dados & BI</h1>
+        <p>SQL avançado • Power BI • AppSheet • Automação • Storytelling de Dados</p>
+      </div>
+      <div class="links">
+        <a class="pill" href="#" id="contactEmail">✉️ amanda@email.com</a>
+        <a class="pill" href="https://github.com/SEU-USUARIO" target="_blank">🐙 GitHub</a>
+        <a class="pill" href="https://www.linkedin.com/in/SEU-LINKEDIN" target="_blank">🔗 LinkedIn</a>
+      </div>
+    </header>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-  </head>
+    <section class="grid">
+      <div class="hero">
+        <h2>Transformo dados em decisões — sem firula e com impacto medido.</h2>
+        <p>Eu construo soluções ponta a ponta: coleta (AppSheet), modelagem/automação (SQL & Apps Script) e visualização (Power BI). Meu foco é reduzir tempo, custos e atrito operacional, deixando o caminho livre para decisões mais rápidas e melhores.</p>
+      </div>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+      <div class="toolbar">
+        <input id="search" placeholder="Buscar por palavra-chave (ex.: churn, AppSheet, Power BI)" />
+        <span class="pill filter" data-filter="all">Todos</span>
+        <span class="pill filter" data-filter="BI">BI</span>
+        <span class="pill filter" data-filter="Automação">Automação</span>
+        <span class="pill filter" data-filter="AppSheet">AppSheet</span>
+        <span class="pill filter" data-filter="Suporte">Suporte</span>
+        <span class="pill filter" data-filter="Operações">Operações</span>
+      </div>
+
+      <!-- CARDS -->
+      
+      <article class="card" data-tags="BI AppSheet Operações">
+        <h3>Controle Logístico</h3>
+        <p class="hint">Coleta estruturada + gestão à vista (operacional) e visão estratégica.</p>
+        <div class="meta">
+          <span class="chip">AppSheet</span>
+          <span class="chip">Power BI</span>
+          <span class="chip">Google Sheets</span>
+        </div>
+        <div class="impact">
+          <span class="badge ok">SLA 72h → 48h</span>
+          <span class="badge ok">+30% produtividade</span>
+        </div>
+        <details>
+          <summary>Ver detalhes</summary>
+          <ul>
+            <li>Implantei coleta via AppSheet (dropdowns e campos automáticos) e validei com usuários.</li>
+            <li>Integração com Google Sheets (exigência do negócio) e dashboard em Power BI com duas visões.</li>
+            <li>Resultados: SLA de 72h para 48h e produtividade geral +30% com bonificação atrelada.</li>
+          </ul>
+        </details>
+      </article>
+
+      <article class="card" data-tags="BI AppSheet Operações">
+        <h3>Controle de Estoque</h3>
+        <p class="hint">Prioridade inteligente para retiradas/devoluções e rastreabilidade.</p>
+        <div class="meta">
+          <span class="chip">AppSheet</span>
+          <span class="chip">Power BI</span>
+        </div>
+        <div class="impact">
+          <span class="badge ok">40% → 80% retiradas (1 mês)</span>
+          <span class="badge ok">Saving R$ 200k acumulado</span>
+        </div>
+        <details>
+          <summary>Ver detalhes</summary>
+          <ul>
+            <li>Saí de formulários + planilha para app AppSheet com regras de peso e integração a BI.</li>
+            <li>Resultados: 80% de equipamentos retirados no mês seguinte e saving de R$ 80k no 1º mês / R$ 200k acumulado.</li>
+          </ul>
+        </details>
+      </article>
+
+      <article class="card" data-tags="Automação BI Operações">
+        <h3>Automação de Vale-Refeição (VR)</h3>
+        <p class="hint">De 2 dias para 4 minutos com cálculo automático e exportação.</p>
+        <div class="meta">
+          <span class="chip">Google Apps Script</span>
+          <span class="chip">Google Sheets</span>
+        </div>
+        <div class="impact">
+          <span class="badge ok">2 dias → 4 min</span>
+        </div>
+        <details>
+          <summary>Ver detalhes</summary>
+          <ul>
+            <li>Upload de arquivos, cálculo de dias úteis (feriados/escalas) e geração de espelho para integração.</li>
+            <li>Tempo total do processo automatizado: 4 minutos.</li>
+          </ul>
+        </details>
+      </article>
+
+      <article class="card" data-tags="Suporte BI Operações">
+        <h3>Suporte (Call Center)</h3>
+        <p class="hint">EDA + monitoria + IA para elevar resolução no 1º contato.</p>
+        <div class="meta">
+          <span class="chip">EDA</span>
+          <span class="chip">IA (avaliação por prompt)</span>
+          <span class="chip">KPIs de atendimento</span>
+        </div>
+        <div class="impact">
+          <span class="badge ok">FCR 75% → 89%</span>
+          <span class="badge ok">−34% cancelamentos</span>
+          <span class="badge ok">Saving R$ 245k/ano</span>
+        </div>
+        <details>
+          <summary>Ver detalhes</summary>
+          <ul>
+            <li>Identifiquei alto volume de rechamados; mapeei causa em falta de treinamento.</li>
+            <li>Implementei monitoria e agente de IA para avaliação automática conforme falhas mapeadas.</li>
+          </ul>
+        </details>
+      </article>
+
+      <article class="card" data-tags="BI AppSheet Operações">
+        <h3>Cancelamentos (Churn)</h3>
+        <p class="hint">Migração de 5 planilhas para AppSheet + BI tático/estratégico.</p>
+        <div class="meta">
+          <span class="chip">AppSheet</span>
+          <span class="chip">Power BI</span>
+          <span class="chip">Churn Analytics</span>
+        </div>
+        <div class="impact">
+          <span class="badge ok">Conversão 23% → 46%</span>
+          <span class="badge ok">Saving R$ 14k/mês</span>
+          <span class="badge warn">Entrega em 7 dias</span>
+        </div>
+        <details>
+          <summary>Ver detalhes</summary>
+          <ul>
+            <li>Coleta estruturada no AppSheet (campos automáticos/seleção) + gestão à vista tática.</li>
+            <li>Dashboard estratégico no Power BI (churn, motivos, reversão).</li>
+          </ul>
+        </details>
+      </article>
+
+      <footer>
+        <span class="hint">© Amanda — Dados & BI. Atualizado em 2025.</span>
+        <a class="cta" href="#">Baixar currículo (PDF)</a>
+      </footer>
+    </section>
+  </div>
+
+  <script>
+    // Mini busca/filtragem por palavra-chave e tags
+    const search = document.getElementById('search');
+    const filters = document.querySelectorAll('.filter');
+    const cards = [...document.querySelectorAll('.card')];
+
+    let activeTag = 'all';
+
+    function applyFilters(){
+      const q = (search.value||'').toLowerCase();
+      cards.forEach(c=>{
+        const text = c.innerText.toLowerCase();
+        const tags = (c.dataset.tags||'').split(' ');
+        const passText = !q || text.includes(q);
+        const passTag = activeTag==='all' || tags.includes(activeTag);
+        c.style.display = (passText && passTag)?'flex':'none';
+      });
+    }
+
+    search.addEventListener('input', applyFilters);
+    filters.forEach(f=>f.addEventListener('click',()=>{activeTag=f.dataset.filter;applyFilters();}));
+
+    // E-mail como link mailto simples
+    const contact = document.getElementById('contactEmail');
+    contact.addEventListener('click',(e)=>{
+      e.preventDefault();
+      window.location.href = 'mailto:amanda@email.com?subject=Contato%20via%20Portf%C3%B3lio&body=Oi%20Amanda%2C%20vamos%20conversar%20sobre...';
+    });
+  </script>
+</body>
 </html>
