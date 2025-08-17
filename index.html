@@ -2,19 +2,22 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  $1  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet" />
-<title>Amanda | Portfólio de Dados & BI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet" />
+  <title>Amanda | Portfólio de Dados & BI</title>
   <meta name="description" content="Portfólio de projetos de Dados & BI: Power BI, SQL, AppSheet, Automação e Análises com impacto real de negócio." />
   <style>
-    :root{--bg:#010d29;--card:#0f3460;--muted:#f0fafbcc;--text:#f0fafb;--accent:#ffd41e;--chip:#0b2447;--ok:#2ecc71;--warn:#ffd41e;--bad:#e74c3c} 
+    :root{
+      --bg:#010d29;--card:#0f3460;--muted:#f0fafbcc;--text:#f0fafb;--accent:#ffd41e;--chip:#0b2447;--ok:#2ecc71;--warn:#ffd41e;--bad:#e74c3c;
+      --bg-light:#f0fafb;--card-light:#ffffff;--text-light:#010d29;--muted-light:#444;--chip-light:#e6eef2
+    }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;} 
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;transition:all .3s ease} 
     a{color:var(--accent);text-decoration:none} 
     .wrap{max-width:1080px;margin:0 auto;padding:28px}
     header{display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between;margin-bottom:24px}
-    .title h1{margin:0;font-size:28px;font-family:'Gotham','Montserrat', 'Poppins', sans-serif;letter-spacing:0.2px} 
+    .title h1{margin:0;font-size:28px;font-family:'Gotham','Montserrat','Poppins',sans-serif;letter-spacing:0.2px} 
     .title p{margin:6px 0 0;color:var(--muted)}
-    .pill{display:inline-flex;align-items:center;gap:8px;background:var(--chip);border:1px solid rgba(255,255,255,0.08);color:var(--text);padding:6px 10px;border-radius:999px;font-size:12px} 
+    .pill{display:inline-flex;align-items:center;gap:8px;background:var(--chip);border:1px solid rgba(255,255,255,0.08);color:var(--text);padding:6px 10px;border-radius:999px;font-size:12px;cursor:pointer} 
     .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
     .hero{grid-column:1/-1;background:linear-gradient(135deg,#0b1a3a 0%,#0a1733 100%);border:1px solid rgba(255,255,255,0.08);padding:22px;border-radius:16px} 
     .hero h2{margin:0 0 8px;font-size:22px;font-family:'Gotham','Montserrat','Poppins',sans-serif} 
@@ -29,7 +32,7 @@
     .meta{display:flex;flex-wrap:wrap;gap:8px}
     .chip{background:var(--chip);border:1px solid rgba(255,255,255,0.08);color:var(--muted);padding:4px 8px;border-radius:999px;font-size:12px} 
     .impact{display:flex;flex-wrap:wrap;gap:6px}
-    .impact .badge{font-size:12px;padding:6px 8px;border-radius:10px;border:1px solid rgba(255,255,255,0.1);background:#0b1f45} 
+    .impact .badge{font-size:12px;padding:6px 8px;border-radius:10px;border:1px solid var(--accent);background:#0b1f45}  
     .impact .ok{border-color:#1f6f3d} 
     .impact .warn{border-color:#7a5f00} 
     .impact .bad{border-color:#6b1f1f} 
@@ -39,7 +42,16 @@
     .links{display:flex;gap:10px;flex-wrap:wrap} 
     .cta{display:inline-flex;align-items:center;gap:8px;background:#091a3a;border:1px solid rgba(255,255,255,0.1);color:var(--text);padding:10px 12px;border-radius:12px} 
     .hint{color:var(--muted);font-size:12px}
-    .hide{display:none}
+
+    /* Light mode */
+    body.light{background:var(--bg-light);color:var(--text-light)}
+    body.light .card{background:var(--card-light);border:1px solid #ddd;color:var(--text-light)}
+    body.light .hero{background:linear-gradient(135deg,#fdfdfd 0%,#f0fafb 100%);border:1px solid #ddd;color:var(--text-light)}
+    body.light .hero p, body.light .title p, body.light .hint{color:var(--muted-light)}
+    body.light .pill{background:var(--chip-light);border:1px solid #ccc;color:var(--text-light)}
+    body.light .chip{background:var(--chip-light);border:1px solid #ccc;color:var(--muted-light)}
+    body.light .cta{background:#fff;border:1px solid #ccc;color:var(--text-light)}
+    body.light details{background:#f9f9f9;border:1px solid #ddd}
   </style>
 </head>
 <body>
@@ -50,15 +62,16 @@
         <p>SQL avançado • Power BI • AppSheet • Automação • Storytelling de Dados</p>
       </div>
       <div class="links">
-        <a class="pill" href="#" id="contactEmail">✉️ amanda@email.com</a>
-        <a class="pill" href="https://github.com/SEU-USUARIO" target="_blank">🐙 GitHub</a>
-        <a class="pill" href="https://www.linkedin.com/in/SEU-LINKEDIN" target="_blank">🔗 LinkedIn</a>
+        <a class="pill" href="#" id="contactEmail">✉️ contato.amandajangrossi@gmail.com</a>
+        <a class="pill" href="https://github.com/amandajangrossi" target="_blank">🐙 GitHub</a>
+        <a class="pill" href="https://www.linkedin.com/in/amandajangrossi/" target="_blank">🔗 LinkedIn</a>
+         <span class="pill" id="toggleMode">🌙/☀️</span>
       </div>
     </header>
 
     <section class="grid">
       <div class="hero">
-        <h2>Transformo dados em decisões — sem firula e com impacto medido.</h2>
+        <h2>Transformo dados em decisões com impacto medido.</h2>
         <p>Eu construo soluções ponta a ponta: coleta (AppSheet), modelagem/automação (SQL & Apps Script) e visualização (Power BI). Meu foco é reduzir tempo, custos e atrito operacional, deixando o caminho livre para decisões mais rápidas e melhores.</p>
       </div>
 
@@ -180,7 +193,7 @@
       </article>
 
             <article class="card" data-tags="BI Operações SQL">
-        <h3>Painel de Transportes (Mercado Interno & Logística Internacional)</h3>
+        <h3>Painel de Transportes (Mercado Interno & LI)</h3>
         <p class="hint">Pipeline completo: da extração à visualização seguindo boas práticas de QA/Microsoft.</p>
         <div class="meta">
           <span class="chip">T‑SQL</span>
@@ -198,10 +211,13 @@
           <ul>
             <li>Criação da stored procedure para alimentar a tabela fato (extração, transformação e carga pontual).</li>
             <li>Modelagem dimensional em star schema (fatos e dimensões com chaves substitutas).</li>
+            <li>Inserção de parâmetros para cálculo de acordo com competências.</li>
             <li>Construção do painel no Power BI respeitando guidelines de QA/Microsoft (medidas, relacionamento e desempenho).</li>
           </ul>
         </details>
       </article>
+
+      
 
       <footer>
         <span class="hint">© Amanda — Dados & BI. Atualizado em 2025.</span>
@@ -232,11 +248,16 @@
     search.addEventListener('input', applyFilters);
     filters.forEach(f=>f.addEventListener('click',()=>{activeTag=f.dataset.filter;applyFilters();}));
 
+    // Toggle dark/light mode
+    const toggle = document.getElementById('toggleMode');
+    toggle.addEventListener('click',()=>{
+      document.body.classList.toggle('light');
+    });
     // E-mail como link mailto simples
     const contact = document.getElementById('contactEmail');
     contact.addEventListener('click',(e)=>{
       e.preventDefault();
-      window.location.href = 'mailto:amanda@email.com?subject=Contato%20via%20Portf%C3%B3lio&body=Oi%20Amanda%2C%20vamos%20conversar%20sobre...';
+      window.location.href = 'mailto:contato.amandajangrossi@gmail.com?subject=Contato%20via%20Portf%C3%B3lio&body=Oi%20Amanda%2C%20vamos%20conversar%20sobre...';
     });
   </script>
 </body>
